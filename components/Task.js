@@ -1,26 +1,27 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 
 const Task = (props) => {
     const [completed, setCompleted] = useState('false')
-    
+
     return (
         <View style={styles.item}>
             <View style={styles.itemLeft}>
                 <View style={styles.square}></View>
-               
-                    <Pressable onPress={()=> {completed === 'false'? setCompleted('true') : setCompleted('false')
-                    
-                }}>
-                        <Text style={styles.itemText}  style={{textDecorationLine: completed === 'true' ? 'line-through': 'none'}}> {props.text} </Text>
-                    </Pressable> 
 
-                        {/* <Text style={styles.itemText} > {props.text} </Text> */}
+                <Pressable onPress={() => {
+                    completed === 'false' ? setCompleted('true') : setCompleted('false')
+
+                }}>
+                    <Text style={styles.itemText} style={{ textDecorationLine: completed === 'true' ? 'line-through' : 'none' }}> {props.text} </Text>
+                </Pressable>
+
+                {/* <Text style={styles.itemText} > {props.text} </Text> */}
             </View>
-            <TouchableOpacity  onPress={() => props.deleteTask(props.index)}>
-                <Ionicons name="trash-bin"  size={24} color="red" />
+            <TouchableOpacity onPress={() => props.deleteTask(props.index)}>
+                <Ionicons name="trash-bin" size={24} color="red" />
             </TouchableOpacity>
             {/* <View style={styles.circular}></View> */}
         </View>
