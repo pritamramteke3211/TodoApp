@@ -9,7 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-possible_updates
+possible_updates.txt/
 
 # macOS
 .DS_Store
