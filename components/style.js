@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     },
   
     taskWrapper: {
-      // padding: 80,
       
       paddingTop: 60,
       paddingHorizontal: 20,

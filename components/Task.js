@@ -18,12 +18,11 @@ const Task = (props) => {
                     <Text style={styles.itemText} style={{ textDecorationLine: completed === 'true' ? 'line-through' : 'none' }}> {props.text} </Text>
                 </Pressable>
 
-                {/* <Text style={styles.itemText} > {props.text} </Text> */}
             </View>
             <TouchableOpacity onPress={() => props.deleteTask(props.index)}>
                 <Ionicons name="trash-bin" size={24} color="red" />
             </TouchableOpacity>
-            {/* <View style={styles.circular}></View> */}
+           
         </View>
 
     )
