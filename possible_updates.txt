@@ -1,1 +1,2 @@
 1. Add Delete Button
+2. Add Event trigger
