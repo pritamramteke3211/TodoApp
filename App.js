@@ -30,9 +30,9 @@ export default function App() {
       <View style={styles.taskWrapper}>
         <View style={styles.header}>
           <Text style={styles.sectionTitle}>
-            Today's tasks
+            My Todos
           </Text>
-          <TouchableOpacity onPress={()=> setTaskItems([])}>
+          <TouchableOpacity onPress={() => setTaskItems([])}>
             <Ionicons name="trash-bin" size={24} color="red" />
           </TouchableOpacity>
         </View>
@@ -41,17 +41,12 @@ export default function App() {
           {
             taskItems.map((item, index) => {
               return (
-                // <TouchableOpacity on completed = {completed} id={index} >
-                //   <Task text={item} key={index}  deleteTask={deleteTask} />
-                // </TouchableOpacity>
-                  <Task text={item} key={index}  deleteTask={deleteTask} />
+                <Task text={item} key={index} deleteTask={deleteTask} />
               )
 
-              // <Task key={index} text={item}/>
             })
           }
-          {/* <Task text={'Task 1'} />
-          <Task text={'Task 2'} /> */}
+
 
         </View>
 
